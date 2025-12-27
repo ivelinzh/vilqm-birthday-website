@@ -80,3 +80,35 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// ==========================
+// CLICK IMAGE TO PLAY MUSIC (UPDATED)
+// ==========================
+document.addEventListener("DOMContentLoaded", () => {
+  const musicTrigger = document.getElementById("music-trigger");
+  const themeSong = document.getElementById("theme-song");
+  const musicHint = document.querySelector(".music-hint");
+
+  if (musicTrigger && themeSong) {
+    musicTrigger.addEventListener("click", () => {
+
+      // If paused, play music and HIDE text
+      if (themeSong.paused) {
+        themeSong.play().catch(err => console.log("Audio error:", err));
+
+        // Hide the text
+        if (musicHint) {
+            musicHint.style.opacity = "0"; // Fades it out
+            setTimeout(() => musicHint.style.display = "none", 300); // Removes it completely
+        }
+
+        // Optional: Confetti pop on start
+        launchConfetti(musicTrigger);
+      }
+      // If playing, pause it (Text does NOT come back)
+      else {
+        themeSong.pause();
+      }
+    });
+  }
+});
