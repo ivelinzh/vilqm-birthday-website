@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Anton&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Scroll Reveal</title>
@@ -13,25 +14,126 @@
     <img src="vilqmimage1.jpg" alt="Top image">
   </section>
 
-  <!-- TEXT SECTION -->
+    <!-- text year of the linux desktop -->
   <section class="text-container">
 
-    <p class="reveal">This year you said:</p>
+    <p class="reveal" style="--rot:-5deg;">
+      This year you said:
+    </p>
 
-    <div class="reveal badge">
+    <div class="reveal badge" style="--rot:7deg;">
       YEAR OF THE LINUX DESKTOP
     </div>
 
-    <p class="reveal big-number">
+    <p class="reveal big-number confetti-trigger" style="--rot:-10deg;">
       67420 times
     </p>
-
   </section>
 
   <!-- BOTTOM IMAGE -->
   <section class="image-section">
     <img src="vilqmimage2.jpg" alt="Bottom image">
   </section>
+
+  <section class="text-container chaos-section">
+
+  <p class="reveal chaos-big" style="--rot:3deg;">
+    You need to touch some grass
+  </p>
+
+  <div class="reveal grass-gif" style="--rot:0deg;">
+  <img src="grass.gif" alt="Grass GIF">
+  </div>
+
+  <p class="reveal chaos-statement" style="--rot:-4deg;">
+    This year you switched <span class="chaos-number">12</span> different OSs.
+  </p>
+
+  <p class="reveal chaos-warning confetti-trigger sound-trigger" style="--rot:6deg;">
+    You need to be stopped.
+  </p>
+
+</section>
+
+<section class="text-container">
+
+  <!-- NEW GAME SECTION -->
+  <p class="reveal" style="--rot:-3deg;">
+    But this year you changed something. You added <strong>1</strong> new game to your Steam account. You started playing <em>Counter-Strike</em>
+  </p>
+
+  <div class="image-section reveal" style="--rot:2deg;">
+    <img src="vilqmimage4.jpg" alt="Counter-Strike image">
+  </div>
+
+  <p class="reveal" style="--rot:3deg;">
+    In just 3 months, poopman played <strong>116 hours</strong> of Counter-Strike. Talk about
+  </p>
+
+  <p class="reveal big-number" style="--rot:-5deg;">JOBLESS</p>
+
+  <p class="reveal" style="--rot:2deg;">
+    if every match is 45 minutes (which we know they aren't) we've played <strong>66</strong> hours of matches.
+  </p>
+
+  <p class="reveal" style="--rot:-2deg;">
+    Which is not too bad if not for the fact that we played <strong>50</strong> hours of deathmatch...
+  </p>
+
+  <div class="reveal" style="--rot:1deg;">
+    <img src="practice.gif" alt="Practice GIF">
+  </div>
+
+  <p class="reveal" style="--rot:3deg;">
+    Still, we won <strong>53%</strong> of our matches so that's goated. Of course, one of us was GoatED, while the other one was <span class="clickable-goat">goat</span>.
+  </p>
+
+  <p class="reveal" style="--rot:-3deg;">
+    Of course, we both had our highs and lows. Some more high, others very very low.
+  </p>
+
+  <p class="reveal" style="--rot:2deg;">
+    In birthday boy tradition, we start with the lows:
+  </p>
+
+  <div class="reveal" style="--rot:0deg;">
+    <video src="lowlights.mp4" controls width="800"></video>
+  </div>
+
+  <p class="reveal" style="--rot:1deg;">
+    But it wasn't all bad, obviously, (or not so obviously):
+  </p>
+
+  <div class="reveal" style="--rot:-2deg;">
+    <video src="highlights.mp4" controls width="800"></video>
+  </div>
+
+  <p class="reveal" style="--rot:3deg;">
+    From the magical air strikes, to breaking the knee caps of your enemies, you posted an average of <strong>-3.46</strong> Leetify rating. Truly my goat.
+  </p>
+
+  <div class="reveal final-message confetti-trigger" style="--rot:0deg;">
+    All in all, happy birthday. 23 is a big number (Lebron, Michael Jordan, David Beckham, 23savage)
+    The past years have not been easy, but your growth as a person has been nothing short of awesome.
+    While your gaming skills improve slowly, your improvement as a person makes me happier than you can imagine (and probably more than Klara can imagine).
+    On to the next one, inshallah, you climb out of silver, king, we believe in you.
+
+  </div>
+
+  <!-- Small text in the right corner -->
+  <p class="reveal text-corner">
+    From your friends
+  </p>
+
+
+  <div class="image-section reveal" style="--rot:-1deg;">
+    <img src="vilqmimage5.jpg" alt="Final image">
+  </div>
+
+</section>
+
+  <!-- Goat audio -->
+  <audio id="goat-sound" src="goat.mp3" preload="auto"></audio>
 
   <script src="script.js"></script>
 </body>

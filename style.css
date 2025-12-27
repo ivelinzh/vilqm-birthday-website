@@ -21,7 +21,6 @@ body {
   max-width: 85%;
   height: auto;
 }
-
 /* TEXT STACK */
 .text-container {
   min-height: 140vh;
@@ -78,6 +77,128 @@ body {
     4px 4px 0 #ff0055,
     -4px -4px 0 #00ff99;
   --rot: -8deg;
+}
+
+/* CONFETTI PIECES */
+.confetti-piece {
+  position: fixed;
+  width: 12px;
+  height: 12px;
+  pointer-events: none;
+  z-index: 9999;
+  animation: confetti-fall 1s ease-out forwards;
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--x), var(--y)) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+/* EXTRA CHAOTIC SECTION */
+
+.chaos-section {
+  min-height: 160vh;
+}
+
+/* BIG JUDGMENT */
+.chaos-big {
+  font-family: "Anton", sans-serif;
+  font-size: 7rem;
+  text-align: center;
+  color: #0f0f0f;
+  text-shadow: 6px 6px 0 #00ff99;
+}
+
+/* STATEMENT LINE */
+.chaos-statement {
+  font-family: "Comic Neue", cursive;
+  font-size: 4.5rem;
+  text-align: center;
+  max-width: 1000px;
+}
+
+/* THE NUMBER */
+.chaos-number {
+  font-family: "Space Mono", monospace;
+  font-size: 8rem;
+  color: #ff0055;
+  display: inline-block;
+  transform: rotate(-6deg);
+  text-shadow:
+    4px 4px 0 #000,
+    -4px -4px 0 #ffeb3b;
+}
+
+/* FINAL WARNING */
+.chaos-warning {
+  font-family: "Anton", sans-serif;
+  font-size: 6rem;
+  color: white;
+  background: black;
+  padding: 2.5rem 4rem;
+  transform: rotate(5deg);
+  box-shadow: 14px 14px 0 red;
+}
+
+.grass-gif img {
+  width: 400px; /* Adjust size as needed */
+  height: auto;
+  display: block;
+  margin: 2rem auto;
+}
+
+/* Clickable goat text */
+.clickable-goat {
+  color: #ff0055;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* FINAL MESSAGE SPECIFIC */
+.final-message {
+  font-family: "Comic Neue", cursive; /* easier to read */
+  font-size: 3rem; /* readable */
+  line-height: 1.5;
+  padding: 3rem 4rem !important;
+  color: #000;
+  background: #ffeb3b;
+  border: 6px dashed #000;
+  box-shadow: 8px 8px 0 #000;
+  transform-origin: center;
+  text-align: center;
+}
+
+/* Remove huge big-number styling inside final message */
+.final-message.big-number {
+  font-size: 3rem;
+  text-shadow: none;
+}
+
+/* Optional: wrap long lines */
+.final-message p {
+  margin: 1rem 0;
+}
+
+/* Keep the right corner text visible */
+.text-corner {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+  font-family: "Comic Neue", cursive;
+  z-index: 10000;
+}
+
+/* Extra confetti for final message */
+.final-message.visible {
+  animation: jitter 0.4s ease-in-out;
 }
 
 /* MICRO JITTER (alive feeling) */
