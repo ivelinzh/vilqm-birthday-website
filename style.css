@@ -4,9 +4,9 @@
 
 body {
   margin: 0;
-  font-family: serif;
-  background: white;
-  color: black;
+  background: #fff;
+  color: #000;
+  overflow-x: hidden;
 }
 
 /* IMAGE SECTIONS */
@@ -18,40 +18,76 @@ body {
 }
 
 .image-section img {
-  max-width: 80%;
+  max-width: 85%;
   height: auto;
 }
 
-/* TEXT AREA */
+/* TEXT STACK */
 .text-container {
-  min-height: 120vh;
+  min-height: 140vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 4rem;
+  gap: 6rem;
+  padding: 6rem 2rem;
 }
 
-/* REVEAL ANIMATION */
+/* BASE REVEAL */
 .reveal {
   opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease;
+  transform: translateY(120px) scale(0.8) rotate(0deg);
+  transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1) rotate(var(--rot));
 }
 
-/* STYLES TO MATCH YOUR SKETCH */
-.badge {
-  border: 3px solid black;
-  padding: 2rem 3rem;
-  font-size: 1.2rem;
+/* LINE 1 */
+.text-container p {
+  font-family: "Comic Neue", cursive;
+  font-size: 4rem;
   text-align: center;
+  max-width: 900px;
+  --rot: -4deg;
 }
 
+/* CHAOTIC BADGE */
+.badge {
+  font-family: "Anton", sans-serif;
+  font-size: 6rem;
+  padding: 3.5rem 4.5rem;
+  border: 8px dashed black;
+  background: #ffeb3b;
+  color: #ff0055;
+  text-align: center;
+  transform-origin: center;
+  box-shadow: 12px 12px 0 #000;
+  --rot: 6deg;
+}
+
+/* GIANT NUMBER */
 .big-number {
-  font-size: 2rem;
+  font-family: "Space Mono", monospace;
+  font-size: 8rem;
+  font-weight: bold;
+  color: #0055ff;
+  text-shadow:
+    4px 4px 0 #ff0055,
+    -4px -4px 0 #00ff99;
+  --rot: -8deg;
+}
+
+/* MICRO JITTER (alive feeling) */
+.reveal.visible {
+  animation: jitter 0.4s ease-in-out;
+}
+
+@keyframes jitter {
+  0% { transform: translateY(0) scale(1) rotate(var(--rot)); }
+  25% { transform: translateY(-3px) scale(1.01) rotate(calc(var(--rot) + 1deg)); }
+  50% { transform: translateY(2px) scale(0.99) rotate(calc(var(--rot) - 1deg)); }
+  100% { transform: translateY(0) scale(1) rotate(var(--rot)); }
 }
