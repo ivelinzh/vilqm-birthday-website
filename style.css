@@ -4,26 +4,54 @@
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: black;
-  color: white;
+  font-family: serif;
+  background: white;
+  color: black;
 }
 
-.video-section {
-  height: 100vh;
+/* IMAGE SECTIONS */
+.image-section {
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.image-section img {
+  max-width: 80%;
+  height: auto;
 }
 
-.text-section {
-  min-height: 60vh;
-  padding: 4rem;
-  background: #111;
+/* TEXT AREA */
+.text-container {
+  min-height: 120vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+/* REVEAL ANIMATION */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* STYLES TO MATCH YOUR SKETCH */
+.badge {
+  border: 3px solid black;
+  padding: 2rem 3rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.big-number {
+  font-size: 2rem;
 }
